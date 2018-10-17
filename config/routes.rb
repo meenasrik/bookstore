@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'books/index'
+    get 'books/show'
+    get 'books/new'
+  end
   get 'styleguide/index'
   root 'books#index'
   get 'authors/index'
