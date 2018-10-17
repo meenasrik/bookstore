@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'styleguide/index'
   root 'books#index'
   get 'authors/index'
 
