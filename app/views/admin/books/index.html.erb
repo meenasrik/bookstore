@@ -25,7 +25,7 @@
           <td>$&nbsp;<%= book.price %></td>
           <td><%= book.content %></td>
           <% if book.bookcover.attached? %>
-            <%= image_tag(book.bookcover) %>
+            <%= image_tag book.bookcover %>
           <% end %>
         </tr>
       <% end %>

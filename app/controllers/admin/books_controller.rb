@@ -14,7 +14,7 @@ class Admin::BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
-    @book.bookcover.attach(params[:bookcover])
+    @book.bookcover.attach(params[:book][:bookcover])
     
     if @book.save
       flash[:notice] = "Book successfully added"
