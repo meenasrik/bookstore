@@ -20,13 +20,13 @@
     <tbody>
       <% @books.each do |book| %>
         <tr>
-          <td><%= book.title %></td>
-          <td><%= book.author.name %></td>
-          <td>$&nbsp;<%= book.price %></td>
-          <td><%= book.content %></td>
-          <% if book.bookcover.attached? %>
-            <%= image_tag book.bookcover %>
-          <% end %>
+          <td>
+            <% if book.bookcover.attached? %>
+              <%= image_tag book.bookcover, class: "img_size" %>
+            <% else %>
+              <%= image_tag("http://lgimages.s3.amazonaws.com/gc-md.gif") %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
