@@ -7,7 +7,7 @@
       <% if current_user %>
         <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "c-button c-button--focal" %>
       <% else %>
-        <%= link_to 'Login', new_user_registration_path, class: "c-button c-button--focal" %>
+        <%= link_to 'Login', new_user_session_path, class: "c-button c-button--focal" %>
       <% end %>
     </li>
     <li class="c-navigation__item">
