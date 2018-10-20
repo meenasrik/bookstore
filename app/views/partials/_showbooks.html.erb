@@ -3,13 +3,13 @@
     <div class="c-card row u-margin-left-large">
       <div class="c-section">
         <% if book.bookcover.attached? %>
-          <%= image_tag book.bookcover.variant(resize: '200x300') %>
+          <%= image_tag book.cover %>
         <% else %>
           <%= image_tag("http://lgimages.s3.amazonaws.com/gc-md.gif") %>
         <% end %>
         <ul class="c-navigation buttons_as_links">
           <li class="c-navigation__item  u-margin-left-small">
-            <a class="c-button c-button--focal" href="#">Buy this</a>
+            <%= link_to 'Buy this', "#", class: "c-button c-button--focal" %>
           </li>
           <li class="c-navigation__item">
             <%= link_to 'Details', "/#{params[:controller]}/#{book.id}", class: "c-button c-button--focal" %>

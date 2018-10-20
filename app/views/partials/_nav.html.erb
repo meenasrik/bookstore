@@ -16,7 +16,8 @@
     <li class="c-navigation__item">
       <%= link_to 'Authors', "/authors/index", class: "c-button c-button--focal" %>
     </li>
-    <% if params[:controller] == "admin/books" %>
+    <%# if params[:controller] == "admin/books" %>
+    <% if current_user && current_user.admin %>
       <li class="c-navigation__item">
         <%= link_to 'Add Book', new_admin_book_path, class: "c-button c-button--focal" %>
       </li>

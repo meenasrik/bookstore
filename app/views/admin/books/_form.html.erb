@@ -1,31 +1,31 @@
 <%= form_for([:admin, @book]) do |form| %>
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title %><br>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :bookcover %>
+    <%= form.label :bookcover %><br>
     <%= form.file_field :bookcover %>
   </div>
 
   <div class="field">
-    <%= form.label :author %>
+    <%= form.label :author %><br>
     <%= form.collection_select(:author_id, Author.all, :id, :name, {prompt: "Select Author"}) %>
   </div>
   
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label :price %><br>
     $<%= form.number_field :price, :step => 0.01 %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :description %><br>
     <%= form.text_field :content %>
   </div>
 
   <div class="field">
-    <%= form.label :file_content %>
+    <%= form.label :file_content %><br>
     <%= form.file_field :file %>
   </div>
 
