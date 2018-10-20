@@ -13,7 +13,7 @@
       <a class="c-navigation__link" href="#">Navigation Link</a>
     </li>
     <li class="c-navigation__item c-navigation__item--push-right">
-      <a class="c-button c-button--focal" href="#">Books</a>
+      <%= link_to 'Books', "/#{params[:controller]}", class: "c-button c-button--focal" %>
     </li>
     <li class="c-navigation__item">
       <a class="c-button c-button--focal" href="#">Authors</a>

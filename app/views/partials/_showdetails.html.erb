@@ -1,9 +1,6 @@
-<h1>Book Details</h1>
-
 <div class="c-section u-margin-horizontal-auto details">
   <div class="u-float-left u-margin-left-large info">
     <% if @book.bookcover.attached? %>
-      <%#= image_tag @book.bookcover, class: "img_size u-margin-horizontal-auto" %>
       <%= image_tag @book.cover, class: "u-margin-horizontal-auto" %>
     <% else %>
       <%= image_tag("http://lgimages.s3.amazonaws.com/gc-md.gif") %>
@@ -16,6 +13,6 @@
     <% if @book.file.attached? %>
     <p><strong class="u-margin-right-small">BookContent: <%= link_to 'Download', @book.file, download: '' %></strong></p>
     <% end %>
-    <a class="c-button c-button--focal" href="#">Buy this</a>
+    <p><a class="c-button c-button--focal" href="#">Buy this</a></p>
   </div>
 </div>

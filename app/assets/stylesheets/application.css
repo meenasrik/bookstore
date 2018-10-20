@@ -50,3 +50,12 @@
   vertical-align: middle;
   font-size: 20px;
 }
+
+/*show books page*/
+.row {
+  display: inline-block;
+}
+
+.buttons_as_links {
+  margin: 20px auto;
+}
