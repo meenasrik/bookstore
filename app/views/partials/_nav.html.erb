@@ -3,20 +3,23 @@
     <li class="c-navigation__item">
       <%= image_tag("book-stack-64.png") %>
     </li>
-    <li class="c-navigation__item">
-      <a class="c-navigation__link c-navigation__link--active" href="#">Navigation Link</a>
-    </li>
-    <li class="c-navigation__item">
-      <a class="c-navigation__link" href="#">Navigation Link</a>
-    </li>
-    <li class="c-navigation__item">
-      <a class="c-navigation__link" href="#">Navigation Link</a>
-    </li>
     <li class="c-navigation__item c-navigation__item--push-right">
+      <% if current_user %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "c-button c-button--focal" %>
+      <% else %>
+        <%= link_to 'Login', new_user_registration_path, class: "c-button c-button--focal" %>
+      <% end %>
+    </li>
+    <li class="c-navigation__item">
       <%= link_to 'Books', "/#{params[:controller]}", class: "c-button c-button--focal" %>
     </li>
     <li class="c-navigation__item">
-      <a class="c-button c-button--focal" href="#">Authors</a>
+      <%= link_to 'Authors', "/authors/index", class: "c-button c-button--focal" %>
     </li>
+    <% if params[:controller] == "admin/books" %>
+      <li class="c-navigation__item">
+        <%= link_to 'Add Book', new_admin_book_path, class: "c-button c-button--focal" %>
+      </li>
+    <% end %>
   </ul>
 </div>
