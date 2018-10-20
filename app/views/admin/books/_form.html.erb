@@ -11,7 +11,7 @@
 
   <div class="field">
     <%= form.label :author %>
-    <%= form.collection_select(:author_id, Author.all, :id, :name) %>
+    <%= form.collection_select(:author_id, Author.all, :id, :name, {prompt: "Select Author"}) %>
   </div>
   
   <div class="field">
@@ -20,8 +20,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :description %>
     <%= form.text_field :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :file_content %>
+    <%= form.file_field :file %>
   </div>
 
   <div class="actions">

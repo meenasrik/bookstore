@@ -15,12 +15,13 @@
  *= require "manifest"
  *= require_self
  */
-
+ 
+/*
  img.img_size {
   width: 200px;
   height: auto;
   max-width: 100%;
- }
+ }*/
 
  table {
   /*border: 2px solid black;*/
