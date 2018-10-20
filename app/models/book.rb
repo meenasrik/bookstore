@@ -11,6 +11,7 @@ class Book < ApplicationRecord
   validates :price, presence: true
 
   def cover
+    # to force to particular size, resize: '200x300!'
     return self.bookcover.variant(resize: '200x300')
   end
 end
