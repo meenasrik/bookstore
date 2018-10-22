@@ -1,2 +1,18 @@
-<h1>Sales#new</h1>
-<p>Find me in app/views/sales/new.html.erb</p>
+<h1>Checkout</h1>
+<h2>Product <%= @book.title %></h2>
+<p>Your card will be charged $<%= @book.price %>.</p>
+
+<%= form_for [@book, @sale], html: { id: "payment-form" } do |f| %>
+  <%= f.hidden_field :stripe_token %>
+
+  <label for="card-element">
+    Credit or debit card
+  </label>
+  <div id="card-element">
+    <!-- A Stripe Element will be inserted here. -->
+  </div>
+
+  <!-- Used to display form errors -->
+  <div id="card-errors"><%= @card_errors %></div>
+  <button>Submit Payment</button>
+<% end %>

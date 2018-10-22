@@ -5,8 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # validations 
-  validates :name, presence: true
+  validates :name, :email, presence: true
 
   # associations
   has_one_attached :avatar
+
+  has_many :sales
+  has_many :books, through: :sales
 end
