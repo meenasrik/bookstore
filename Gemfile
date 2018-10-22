@@ -42,6 +42,8 @@ group :development, :test do
   gem 'sqlite3'
   # rspec-rails
   gem 'rspec-rails', '~> 3.8'
+  gem 'factory_bot'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :development do
@@ -65,7 +67,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'stripe'
-gem 'factory_bot'
 
 group :production do
   gem 'pg'
