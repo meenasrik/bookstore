@@ -1,6 +1,6 @@
 class Book < ApplicationRecord 
   # associations
-  belongs_to :author
+  belongs_to :author, class_name: "User"
   has_many :sales
   has_many :users, through: :sales
 

@@ -9,7 +9,9 @@ RSpec.describe "Books", type: :system do
 
     visit "/"
 
-    expect(page).to have_text(first_book.title)
-    expect(page).to have_text(first_book.title)
+    expect(page).to have_css("img")
+    expect(page).to have_css("img")
+    # expect(page).to have_text(first_book.title)
+    # expect(page).to have_text(second_book.title)
   end
 end
