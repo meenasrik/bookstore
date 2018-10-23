@@ -9,7 +9,7 @@
         <% end %>
         <ul class="c-navigation buttons_as_links">
           <li class="c-navigation__item  u-margin-left-small">
-            <%= link_to 'Buy this', "#", class: "c-button c-button--focal" %>
+            <%= link_to 'Buy this', new_sale_path(book), class: "c-button c-button--focal" %>
           </li>
           <li class="c-navigation__item">
             <%= link_to 'Details', "/#{params[:controller]}/#{book.id}", class: "c-button c-button--focal" %>

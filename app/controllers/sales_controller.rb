@@ -8,6 +8,7 @@ class SalesController < ApplicationController
 
   def new
     @sale = Sale.new
+    @book = Book.find(params[:book_id])
   end
 
   def create
