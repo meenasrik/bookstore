@@ -9,7 +9,7 @@ class Admin::BooksController < ApplicationController
 
   def new
     @book = Book.new
-    @authors = Author.all
+    @authors = User.where(author: true)
   end
 
   def create
@@ -26,6 +26,6 @@ class Admin::BooksController < ApplicationController
 
   private
     def book_params
-      params.require(:book).permit(:title, :content, :price, :author_id, :bookcover, :file)
+      params.require(:book).permit(:title, :content, :price, :author, :bookcover, :file)
     end
 end

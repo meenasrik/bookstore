@@ -1,1 +1,8 @@
 <!-- iterate and display author names and books  -->
+<div class="c-container-page u-margin-left-small">
+  <div class="u-margin-left-large display_authors">
+    <% @authors.each do |author| %>  
+      <p><%= author.name %></p>
+    <% end %>
+  </div>
+</div>

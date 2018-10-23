@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   root 'books#index'
   get 'authors/index'
 
-  resources :books, only: [:index, :show]
-  resources :sales, only: [:index, :show, :new, :create]
+  resources :books, only: [:index, :show] do
+    resources :sales, only: [:show, :new, :create]
+  end
+  resources :sales, only: [:index]
   
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

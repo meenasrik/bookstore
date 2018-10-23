@@ -5,7 +5,7 @@ class StripeServices::CreateCharge
       currency: "usd",
       # source: params[:sale][:stripe_token], # obtained with Stripe.js
       source: stripe_token,
-      description: "#{current_user.email} purchased #{@book.title}"
+      description: "#{user.email} purchased #{book.title}"
     )
   end
 end

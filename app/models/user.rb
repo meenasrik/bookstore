@@ -12,4 +12,5 @@ class User < ApplicationRecord
 
   has_many :sales
   has_many :books, through: :sales
+  has_many :books, foreign_key: :author_id
 end

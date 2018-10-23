@@ -2,7 +2,7 @@ window.onload = function() {
   var cardEl = document.getElementById('card-element');
   if (cardEl) {
     // Create a Stripe client.
-    var stripe = Stripe('pk_test_Y015TGAq7KxC1mkLk0BNrnlU');
+    var stripe = Stripe('pk_test_dgRQvecxWJCv1RXJwBhmCkfh');
 
     // Create an instance of Elements.
     var elements = stripe.elements();

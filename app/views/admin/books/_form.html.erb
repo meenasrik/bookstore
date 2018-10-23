@@ -11,7 +11,8 @@
 
   <div class="field">
     <%= form.label :author %><br>
-    <%= form.collection_select(:author_id, Author.all, :id, :name, {prompt: "Select Author"}) %>
+    <%#= form.collection_select(:author_id, Author.all, :id, :name, {prompt: "Select Author"}) %>
+    <%= form.collection_select(@authors, :id, :name, {prompt: "Select Author"}) %>
   </div>
   
   <div class="field">
