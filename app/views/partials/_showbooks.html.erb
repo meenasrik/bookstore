@@ -8,9 +8,6 @@
           <%= image_tag("http://lgimages.s3.amazonaws.com/gc-md.gif") %>
         <% end %>
         <ul class="c-navigation buttons_as_links">
-          <li class="c-navigation__item  u-margin-left-small">
-            <%= book.id %>
-          </li>
           <% if current_user %>
             <li class="c-navigation__item  u-margin-left-small">
               <%= link_to 'Buy this', new_book_sale_path(book), class: "c-button c-button--focal" %>
@@ -28,6 +25,3 @@
     </div>
   <% end %>
 </div>
-
-
-

@@ -6,13 +6,40 @@ import 'react-table/react-table.css'
 class HelloWorld extends React.Component {
   render () {
     return (
-      <React.Fragment>
-        Hey! Greeting: {this.props.greeting}
-      </React.Fragment>
+      // <React.Fragment>
+      //   Hey! Greeting: {this.props.greeting}
+      // </React.Fragment>
 
-      // <div>
-
-      // </div>
+      <div className="c-section">
+        <ReactTable
+          data={this.props.books}
+          columns={[
+            {
+              Header: "Title",
+              accessor: "title"
+            },
+            {
+              Header: "Author",
+              // accessor: "author.name"
+              Cell: b => console.log(b.author.name)
+              // Cell: ({ row, b }) => {
+              //     return ({b.author.name})
+              // }
+            },
+            {
+              Header: "Price",
+              accessor: "price",
+              width: 100,
+              maxWidth: 100, 
+              minWidth: 100
+            },
+            {
+              Header: "Content",
+              accessor: "content"
+            }
+          ]}
+        />
+      </div>
     );
   }
 }
