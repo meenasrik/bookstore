@@ -8,6 +8,9 @@
 
 
 #*************************************************************
+
+require 'faker'
+
 User.destroy_all
 Book.destroy_all
 
