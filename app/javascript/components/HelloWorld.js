@@ -20,11 +20,7 @@ class HelloWorld extends React.Component {
             },
             {
               Header: "Author",
-              // accessor: "author.name"
-              Cell: b => console.log(b.author.name)
-              // Cell: ({ row, b }) => {
-              //     return ({b.author.name})
-              // }
+              accessor: "author.name"
             },
             {
               Header: "Price",
