@@ -13,6 +13,12 @@
     <% if @book.file.attached? %>
     <p><strong class="u-margin-right-small">BookContent: <%= link_to 'Download', @book.file, download: '' %></strong></p>
     <% end %>
-    <p><a class="c-button c-button--focal" href="#">Buy this</a></p>
+    <p>
+      <% if current_user %>          
+        <%= link_to 'Buy this', new_book_sale_path(@book), class: "c-button c-button--focal" %>
+      <% else %>
+        <%= link_to 'Buy this', new_user_session_path, class: "c-button c-button--focal" %>        
+      <% end %>
+    </p>
   </div>
 </div>
